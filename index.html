@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="feedback.css">
+</head>
+
+<body>
+在线反馈测试页面
+<div id="panel" class="panel">
+
+<div id="banner" class="banner">
+    <div class="tabs">
+        <li id="tab-suggest" class="active">意见</li>
+        <li id="tab-score">评分</li>
+        <li class="my-feed"><a href="">我的反馈</a></li>
+
+    </div>
+</div>
+
+<div class="content">
+    <div id="suggest" class="tab-content">
+        <div class="radio-inline">
+            <li><input type="radio" name="suggestType" value="0" checked>遇到的问题</li>
+            <li><input type="radio" name="suggestType" value="1">提建议</li>
+            <li><input type="radio" name="suggestType" value="2">其他</li>
+        </div>
+        <div class="title">反馈内容<span class="danger-tips">*</span></div>
+        <textarea id="feedbackContent" maxlength="100" class="feedback-desc" placeholder="欢迎提出您在使用过程中遇到的问题或宝贵建议（100字以内）"></textarea>
+
+        <div class="add-image">
+            <button id="screenshot">截图</button>
+     <!--        <button class="btn-upload">添加图片
+                <input id="upload" type="file" name="files[]"/>
+            </button> -->
+            <input id="upload" type="file" name="files[]"/>
+            <div id="upload-filename">xxxxx</div>
+        </div>
+    </div>
+
+    <div id="score" class="tab-content hidden">
+        <div id="subject1">
+            <div role="title">题目标题</div>
+            <div role="options">
+                <input type="radio" name="" value="非常满意">
+                <input type="radio" name="" value="满意">
+            </div>
+        </div>
+        <div id="subject2">
+            <div role="title">题目标题</div>
+            <div role="options">
+                <input type="radio" name="" value="非常满意">
+                <input type="radio" name="" value="满意">
+            </div>
+        </div>
+    </div>
+
+    <div class="user-info">
+        <div class="title">工号<span class="danger-tips">*</span></div>
+        <input id="userId" placeholder="请输入您的工号"/>
+        <div class="title">姓名<span class="danger-tips">*</span></div>
+        <input id="username" placeholder="请输入您的姓名"/>
+        <div class="title">手机号<span class="danger-tips">*</span></div>
+        <input id="userPhone" placeholder="请输入您的手机号"/>
+    </div>
+
+    <div id="errors" class="errors"></div>
+
+    <div>
+        <button id="submit" class="submit">提交</button>
+    </div>
+</div>
+
+</div>
+
+<button id="feedback-btn" class="feedback-btn feedback-btn-gray">
+<img src="" width="50px" />
+<div>反</div>
+<div>馈</div>
+</button>
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.12.1/js/vendor/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.12.1/js/jquery.fileupload.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-file-upload/9.12.1/js/jquery.iframe-transport.min.js"></script> -->
+<!-- <script src="feedback_bak.js"></script> -->
+<script type="text/javascript">
+$(document).ready(function() {
+    // console.info("out feedback_bak.js-->" + $.fn.jquery);
+
+    // $('#upload').fileupload({
+    //     forceIframeTransport: true,
+    //     dataType: 'json',
+    //     url:"https://yuanfenba.leanapp.cn/api/upload/image/iecross",
+    //     done: function (e, data) {
+    //         $.each(data.files, function (index, file) {
+    //             $('<p/>').text(file.name).appendTo(document.body);
+    //         });
+    //     }
+    // });
+});
+</script>
+</body>
+
+</html>
+
